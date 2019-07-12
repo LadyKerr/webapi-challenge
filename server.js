@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 
 const actionRouter = require("./data/api/action-router");
 const projectRouter = require("./data/api/project-router");
 
 const server = express();
+server.use(cors());
 
 //middleware
 function logger(req, res, next) {
