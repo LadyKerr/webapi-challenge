@@ -26,13 +26,28 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+- Two features of express are: middleware and routing.
+
 - [ ] Describe Middleware?
 
-- [ ] Describe a Resource?
+- Middleware is a function that is able to handle security and logging concerns throughout the application.
+  In express, a middleware is an array of functions. The order that middleware is written is important as it is executed
+  in the order that it is introduced to the server; middleware has to be explicitly introduced to the server.
+  For example, we can tell the server to parse json objects by telling it to use express.json().
+  The middleware function takes in three arguments: request, response and next (which called the next middleware in the code.)
+
+* [ ] Describe a Resource?
+
+* A Resource is the data or information that is served to the client. Examples are images.
 
 - [ ] What can the API return to help clients know if a request was successful?
 
-- [ ] How can we partition our application into sub-applications?
+- An API can return a json object with a message so the client knows if the response was successful.
+  Status codes like 200 and 201 can let the client know that the request was successfully completed.
+
+* [ ] How can we partition our application into sub-applications?
+
+* We can make out applications into subapplication by breaking down the application into smaller files and using routes.
 
 ## Project Setup
 
