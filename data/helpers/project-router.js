@@ -41,4 +41,26 @@ router.get("/:id", (req, res) => {
     });
 });
 
+// router.post("/:id/actions", (req, res) => {
+//   let newAction = req.body;
+//   const { description, notes } = req.body;
+//   newAction.project_id = id;
+
+//   if (!description || !notes) {
+//     res.status(400).json({
+//       message: "Please provide a description and notes for the action"
+//     });
+//   } else {
+//     Actions.insert(newAction)
+//       .then(newAction => {
+//         res.status(201).json(newAction);
+//       })
+//       .catch(err => {
+//         res.status(500).json({
+//           message: "There was an error adding this action to the database."
+//         });
+//       });
+//   }
+// });
+
 module.exports = router;
